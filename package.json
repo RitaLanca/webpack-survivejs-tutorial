@@ -4,7 +4,7 @@
   "description": "survive js tutorial to getting start with webpack",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "wp --mode production"
   },
   "author": "rita",
   "license": "ISC",
