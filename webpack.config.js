@@ -6,6 +6,11 @@ const { WebpackPluginServe } = require('webpack-plugin-serve');
 
 module.exports = {
   watch: mode === "development",
+  watchOptions: { // to config POLLING instead of watching files
+    aggregateTimeout: 300, // Delay the first rebuild (in ms)
+    poll: 1000, // Poll using interval (in ms or a boolean)
+    ignored: /node_modules/, // ignore to decrease CPU usage
+  },
   entry: [
     "./src",
     'webpack-plugin-serve/client' // ← important: this is required, where the magic happens in the browser
