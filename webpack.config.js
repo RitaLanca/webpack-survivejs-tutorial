@@ -14,6 +14,7 @@ module.exports = {
   plugins: [
     new MiniHtmlWebpackPlugin({ context: { title: "Demo" } }),
     new WebpackPluginServe({
+      host: "localhost", // "0.0.0.0"
       port: parseInt(process.env.PORT,10) || 3000,
       static: "./dist",
       liveReload: true,
